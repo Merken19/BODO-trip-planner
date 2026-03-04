@@ -66,6 +66,6 @@ app.get('/api/people', (req, res) => {
   res.json({ people });
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`DatePicker server running on port ${PORT}`);
 });
