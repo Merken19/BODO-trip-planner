@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BODOBOYS Trip Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="app-header">
+    <h1>BODOBOYS Trip Planner</h1>
+    <div id="user-info" class="hidden">
+      <span>You: <strong id="current-name"></strong></span>
+      <button id="change-name-btn" title="Change name">&#9998;</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <main>
+      <div class="calendar-header">
+        <button id="prev-month">&larr;</button>
+        <h2 id="month-title"></h2>
+        <button id="next-month">&rarr;</button>
+      </div>
+      <div id="calendar-container" class="calendar-container"></div>
+    </main>
+
+    <aside id="sidebar">
+      <div id="day-detail" class="hidden">
+        <h3 id="detail-date"></h3>
+        <p id="detail-people"></p>
+      </div>
+      <div id="best-dates">
+        <h3>Best Dates</h3>
+        <p class="hint">Dates where 2+ people are free</p>
+        <ul id="best-dates-list"></ul>
+      </div>
+      <div id="people-list">
+        <h3>Participants</h3>
+        <ul id="participants-list"></ul>
+      </div>
+    </aside>
+  </div>
+
+  <div id="name-modal-backdrop" class="modal-backdrop hidden">
+    <div class="modal">
+      <button id="modal-close" class="modal-close" title="Close">&times;</button>
+      <h2>Welcome to BODOBOYS Trip Planner</h2>
+      <p>Enter your name to mark your available dates.</p>
+      <div class="modal-form">
+        <input type="text" id="name-input" placeholder="Your name" maxlength="50" autocomplete="off">
+        <button id="name-btn">Join</button>
+      </div>
+      <p class="modal-hint">Or close to browse in read-only mode.</p>
+      <p class="modal-credit">Created by Eren</p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
